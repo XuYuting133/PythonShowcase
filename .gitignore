@@ -1,0 +1,8 @@
+*config*
+*.code-workspace
+/temp*
+/*/log
+/test
+test*
+*.bat
+/*/fgdb

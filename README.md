@@ -1,4 +1,4 @@
-# PythonShowcase
+Contact me at xu_yuting@hotmail.com should you have any question.
 
 # 001. ArcGIS Desktop Tools #
 This folder keeps python scripts written as ArcGIS Desktop Tools. Instructions to use the script:
@@ -18,4 +18,6 @@ This folder keeps scripts from past projects to perform network analysis with Ne
 This folder keeps scripts from past data science / machine learning projects.
 
 # 009. Project Showcase #
-This folder contains presentation slides from some of the past research projects.
+This folder contains presentation slides from some of the past research/engineering projects.
+- Real Time Traffic Information Dashboard
+- Diurnal and Spatial Dynamics of SG Urban Spatial Networks
