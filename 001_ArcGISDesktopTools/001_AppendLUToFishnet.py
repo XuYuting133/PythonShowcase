@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
+# Name:        AppendLUToFishnet
+# Purpose:     This script appends land use information to a new polygon layer; serves as input for machine learning
 #
 # Author:      ytxu
 #
@@ -11,16 +11,13 @@
 
 import arcpy, os, sys, datetime
 
+# ------------- Obtain input parameters from users --------------- #
 fishnetGridLyr = arcpy.GetParameterAsText(0)
 LU_lyr = arcpy.GetParameterAsText(1)
-
 outputDissolveName = arcpy.GetParameterAsText(2)
-
 intermediaryFGDB = arcpy.GetParameterAsText(3)
 outputIntersectName = arcpy.GetParameterAsText(4)
-
 LUNameField = arcpy.GetParameterAsText(5)
-
 
 
 def main():
