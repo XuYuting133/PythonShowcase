@@ -17,8 +17,6 @@ NUS Master of Applied GIS Programme, Class of 2021
 ## Dashboard Design
 The dashboard is built on ArcGIS Dashboards on ArcGIS Online. It is available to the public for viewing at: https://bit.ly/32deMtC. For more information on ArcGIS Dashboards, please visit the page [here](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview#:~:text=ArcGIS%20Dashboards%20enables%20users%20to,visualizations%20on%20a%20single%20screen.&text=Dashboards%20are%20essential%20information%20products,component%20to%20your%20geospatial%20infrastructure.).
 
-- *Updates on 22 Apr 2021*: Due to roll-out of new features on ArcGIS Dashboards, viewing images/attachments via Details widget is currently unavailable. This has been reported to the Development team and recognized as a product bug on the ArcGIS Dashboards. For more details, please refer to [this thread](https://community.esri.com/t5/dashboards-beta-ques-read-only/has-the-enable-media-in-the-details-block-changed-in-the/td-p/128522).
-
 
 ## Runtime
 Average runtime from 3 readings is taken. 

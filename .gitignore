@@ -9,3 +9,6 @@ test*
 /unreleased
 /**/constants.py
 /**/config.py
+/**/test*.py
+/**/test*.ipynb
+/**/*config.py
