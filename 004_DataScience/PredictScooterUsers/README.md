@@ -1,4 +1,4 @@
-This was the first full machine learning project I completed in early 2020. Was rather badly done because I misunderstood the features to be predicted.
+This was the first complete machine learning project I did independently in early 2020. Was rather badly done because I misunderstood the features to be predicted. Nevertheless, it was an excellent learning experience because I received useful feedback from data science practitioners and also realised that some of my old ways of coding were not the most optimal.
 
 
 # This Machine Learning Pipeline is developed with these purposes: #
