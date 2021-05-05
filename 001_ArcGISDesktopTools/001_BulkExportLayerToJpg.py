@@ -14,36 +14,32 @@
 import arcpy
 import os
 
-jpg_export_folder = r"C:\Users\ytxu\Documents\ArcGIS\Projects\GE6211SDH\Result\Weighted Degree"
-
+jpg_export_folder = r"C:\Users\ytxu\Documents\ArcGIS\Projects\MastersThesis\export"
+if not os.path.exists(jpg_export_folder):
+    os.mkdir(jpg_export_folder)
 
 # In[2]:
 
 
-proj_path = r"C:\Users\ytxu\Documents\ArcGIS\Projects\GE6211SDH\GE6211SDH.aprx"
+proj_path = r"C:\Users\ytxu\Documents\ArcGIS\Projects\MastersThesis\MastersThesis.aprx"
 aprx = arcpy.mp.ArcGISProject(proj_path)
-
+m = aprx.listMaps("Map")[0]
 
 # In[3]:
-
-
-# get map
-m = aprx.listMaps("Map1")[0]
-m
 
 
 # In[4]:
 
 
-pr_layout = aprx.listLayouts("Layout1")[0]
-hour_element = pr_layout.listElements("TEXT_ELEMENT", "HOUR")[0]
+pr_layout = aprx.listLayouts("Layout")[0]
+hour_element = pr_layout.listElements("TEXT_ELEMENT", "filter")[0]
 # day_type_element = pr_layout.listElements("TEXT_ELEMENT", "DAY")[0]
 
 
 # In[6]:
 
 
-refLyr = r"C:\Users\ytxu\Documents\ArcGIS\Projects\GE6211SDH\networklyr.lyrx"
+# refLyr = r"C:\Users\ytxu\Documents\ArcGIS\Projects\GE6211SDH\networklyr.lyrx"
 
 
 # In[8]:
@@ -55,22 +51,23 @@ import time
 # In[6]:
 
 
-defQuery = "StartX <> 0 And StartY <> 0 And EndX <> 0 And EndY <> 0"
+defQueryTemplate = "Shape_Length <= {}"
+textBoxTemplate = "Road Segment Length <= {}"
 
-for hour in range(0,24):
+for length in range(0, 11000, 50):
         
-    lyr_name = "Weekday {}:00".format(str(hour).zfill(2))
-    
+    lyr_name = "RoadSectionLine"
+    defQuery = defQueryTemplate.format(length)
     lyr = m.listLayers(lyr_name)[0]
         #arcpy.management.ApplySymbologyFromLayer(lyr, refLyr, None, "MAINTAIN")
-        #lyr.definitionQuery = defQuery
+    lyr.definitionQuery = defQuery
     lyr.visible = True
         
     
-    hour_element.text = "{}:00".format(str(hour).zfill(2))
+    hour_element.text = textBoxTemplate.format(length)
         #day_type_element.text = day_type_map[day_type]
     
-    out_jpg = "202101_Weekday_{}.jpg".format(str(hour).zfill(2))
+    out_jpg = "RoadSegmentBelow{}.jpg".format(length)
     out_jpg_path = os.path.join(jpg_export_folder, out_jpg)
     
     pr_layout.exportToJPEG(out_jpg_path,300)
