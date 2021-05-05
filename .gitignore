@@ -1,8 +1,11 @@
 *config*
 *.code-workspace
 /temp*
-/*/log
+/**/log
 /test
 test*
 *.bat
-/*/fgdb
+/**/fgdb
+/unreleased
+/**/constants.py
+/**/config.py
