@@ -12,3 +12,4 @@ test*
 /**/test*.py
 /**/test*.ipynb
 /**/*config.py
+/**/Remark.md
