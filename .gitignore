@@ -13,3 +13,6 @@ test*
 /**/test*.ipynb
 /**/*config.py
 /**/Remark.md
+/**/unreleased*.py
+/**/unreleased*.ipynb
+/**/data
