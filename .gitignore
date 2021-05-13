@@ -16,3 +16,6 @@ test*
 /**/unreleased*.py
 /**/unreleased*.ipynb
 /**/data
+.gitignore
+.gitattributes
+/.vscode
