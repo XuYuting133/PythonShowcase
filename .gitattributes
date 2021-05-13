@@ -1,0 +1,2 @@
+git lfs track "*.ipynb"
+*.ipynb filter=lfs diff=lfs merge=lfs -text
